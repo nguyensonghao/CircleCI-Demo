@@ -3,8 +3,9 @@ jobs:
   # Build project
   build:
     docker:
-      - image: circleci/node:7.10
-
+      - image: circleci/node:8.11
+    environment:
+      - NODE_ENV: development
     working_directory: ~/repo
     steps:
       - checkout
