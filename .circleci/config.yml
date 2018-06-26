@@ -16,7 +16,7 @@ jobs:
           - v1-dependencies-
 
       - run: 
-        Name: Install Nodemodule
+        name: Install Nodemodule
         command: npm install
 
       - save_cache:
@@ -33,7 +33,7 @@ jobs:
     steps:
       - checkout
       - run: 
-        Name: Test
+        name: Test
         command: npm install
 
 # Config flows excute project
