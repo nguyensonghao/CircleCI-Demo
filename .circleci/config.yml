@@ -15,9 +15,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: 
-        name: Install Nodemodule
-        command: npm install
+      - run: npm install
 
       - save_cache:
           paths:
@@ -32,9 +30,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: 
-        name: Test
-        command: npm install
+      - run: npm test
 
 # Config flows excute project
 workflows:
